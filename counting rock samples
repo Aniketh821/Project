@@ -1,0 +1,28 @@
+#include  <stdio.h> 
+int main()
+ {
+int a[500],n,i,j,r,r1,r2,count=0;
+printf("Enter the number of elements:");
+scanf("%d",&n);
+printf("Enter the number of ranges:");
+scanf("%d",&r);
+printf("Enter the elements:");
+for(i=0;i<n;i++)
+scanf("%d",&a[i]);
+printf("Enter the range:");
+for(i=0;i<r;i++)
+{
+scanf("%d %d",&r1,&r2);
+for(j=0;j<n;j++) 
+{ 
+if((a[j]>=r1)&&(a[j]<=r2))
+{
+
+  count++;
+}
+}
+printf("The number of samples in this range are %d ",count);
+count=0;
+}
+return 0;
+}
