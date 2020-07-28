@@ -1,0 +1,23 @@
+#include  <stdio.h>
+int calc(int p, int q) ;
+int main()
+{
+int a,b;
+    printf("Enter the number of rows of the  matrix : ");
+	scanf("%d",&a);
+	printf("Enter the number of columns of the matrix : ");
+	scanf("%d",&b);
+    printf("%d", calc(a,b));
+	return 0;
+}
+int calc(int p, int q)
+{
+	if (p == 1 || q == 1)
+    	{
+        	return 1;
+    	}
+    	else
+    	{
+        	return calc(p - 1, q) + calc(p, q - 1);
+    	}
+}
