@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+ 	int n,count=0,k,i,j=0,flag,chksqr,temp[10000];
+    double sqnum;
+    printf("Enter the number:");
+    scanf("%d",&n);
+    for(i=2;i<=n/2;i++)
+    {
+        if(n%i==0)
+        {    
+			count++;
+            sqnum=sqrt(i);
+            chksqr=sqnum;
+            if(chksqr==sqnum)
+            {
+                count--;
+                temp[j]=i;
+                j++;
+            }
+            else
+            {
+                for(k=0;k<j;k++) { if(i>temp[k] && j!=0)
+                    {
+                        if(i%temp[k]==0)
+                        {	
+                          	count--;
+                        	k=j+1;
+                        }
+                    }
+                    else
+                        break;
+                }
+            }
+        }}
+printf(" Number of square free numbers are =%d",count);
+return 0;
+}
