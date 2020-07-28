@@ -1,0 +1,21 @@
+#include  <stdio.h>
+void main() 
+{
+int n,Kth_position,i,count=0;
+printf("Enter n value: ");
+scanf("%d",&n);
+printf("Enter the kth position: ");
+scanf("%d",&Kth_position);
+for(i=n;i>=1;i--)
+{
+  if((n%i)==0)
+  count++;
+  if(count==Kth_position)
+  {
+  printf("%d",i);
+  break;
+  }
+}
+if(count<Kth_position)
+printf("1");
+}
