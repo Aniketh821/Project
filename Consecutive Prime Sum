@@ -1,0 +1,34 @@
+#include<stdio.h>
+int checkprimr(int num)
+{
+	int count=0,factor;
+	for(factor=2;factor*factor<=num;factor++)
+	{
+		if(num%factor==0)
+		{
+			count++;
+			break;
+		}
+	}
+	if(count==0)
+	return 1;
+	else
+	return 0;
+		
+}
+int main()
+{
+	int n,sum,search,count=0;
+	scanf("%d",&n);
+	sum=2;
+	for(search=3;search<=n;search++)
+	{
+		if(checkprime(search)==1)
+		{
+			sum=sum+search;
+			if(sum<=n && checkprine(sum)==1)
+			count++;
+		}
+	}
+	printf("%d",count);
+}
